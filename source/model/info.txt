@@ -1,0 +1,21 @@
+Website for ads-5-periodo-uninassau.infinityfree
+
+senha: Adsuninassau5periodo
+
+////////////////////////////////////////////////////
+
+banco : 
+
+  usuario do banco = root 
+
+  senha do banco = 147 258 369
+
+  nome do banco: praticaprofissionalads5
+
+tabelas: 
+
+  login_adm
+
+  login_coordenador
+
+  possui id , cpf , senha = varchar(32),
