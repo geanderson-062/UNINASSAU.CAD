@@ -9,13 +9,21 @@ SISTEMA : painel de controle uninassau
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+# CORES UTILIZADAS NO SISTEMA 
+
+  #rgb(41, 63, 136)
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 # REQUISITOS PARA O SISTEMA
 
 fazer o login do coordenador e o adm com cpf e senha 
 
 sistema deve usar criptografia md5 para a senha 
 
-sistema deve ter uma tabela que mostra os coordenadores cadastrados dentro de home_adm 
+sistema deve ter uma tabela que mostra os coordenadores cadastrados , adiministradores cadastrados , visitas cadastradas dentro de home_adm 
+
+sistema deve ter uma tabela que mostra as visitas cadastrradas dentro da home do coordenador. 
    
      INFORMAÇÕES PARA INSERIR NA tabela e para gerar o cadastro 
 
