@@ -1,6 +1,6 @@
 # atividade-de-pratica-profissional
 
-SISTEMA : painel de controle uninassau 
+SISTEMA : UNINASSAU.CAD  
 
 # DESENVOLVEDORES: 
 
@@ -9,9 +9,10 @@ SISTEMA : painel de controle uninassau
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-# CORES UTILIZADAS NO SISTEMA 
+ CORES UTILIZADAS NO SISTEMA 
 
-  #rgb(41, 63, 136)
+  # rgb(41, 63, 136) AZUL
+  # #FEF50F AMARELO
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -25,17 +26,41 @@ sistema deve ter uma tabela que mostra os coordenadores cadastrados , adiministr
 
 sistema deve ter uma tabela que mostra as visitas cadastrradas dentro da home do coordenador. 
    
-     INFORMAÇÕES PARA INSERIR NA tabela e para gerar o cadastro 
+     INFORMAÇÕES PARA INSERIR NA tabela coordenador e para gerar o cadastro 
 
-     # Cidade
-     # Escola
-     # Setor
-     # Estado
+     # Nome
+     # Cpf
+     # Telefone
+     # Senha
+     # Função
 
-sistema deve criar um cadastro de coordenadores dentro o home do adm 
+     INFORMAÇÕES PARA INSERIR NA tabela adiministrador e para gerar o cadastro 
+
+     # Nome
+     # Cpf
+     # Telefone
+     # Senha
+     # Função
+
+     INFORMAÇÕES PARA INSERIR NA tabela Visitas e para gerar o cadastro 
+
+     #Usuário
+     #Setor
+     #Escola
+     #Quantidade de alunos alunos
+     #Assunto abordado no dia
+     #Responsavel
+     #Data
+
+sistema deve criar um cadastro de coordenadores , adiministradores e visitas dentro da dashboard do adm 
+
+sistema deve criar um cadastro de visitas dentro da dashboard do coordenador 
 
 sistema deve gerar relatorios em pdf para o adm com o nome de cada um dos 
-coordenadores . 
+coordenadores , adiministradores e visitas . 
+
+sistema deve gerar relatorios em pdf para o coordenador com o nome de cada uma das 
+ visitas . 
 
 sistema deve estar dentro das normas lgpda 2021 / aviso de cookies e polica de privacidade
 
@@ -49,6 +74,9 @@ sistema deve estar dentro das normas lgpda 2021 / aviso de cookies e polica de p
      # HOME_ADM 
      # HOME_COORDENADOR 
      # CADASTRA_COORDENADOR 
+     # CADASTRA_ADIMINISTRADOR
+     # CADASTRA_VISITAS
+     # POLITICAS_DE_USO_E_PRIVACIDADE
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -79,4 +107,4 @@ VS CODE
 XAMPP 
 
 CANVA / BOOTSTRAP / ALGUM CRIADOR DE FAVICON / infinityfree
-PIXXXLR/ 
+PIXXLR/ 
