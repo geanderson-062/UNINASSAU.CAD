@@ -1,3 +1,7 @@
+<?php 
+     session_start();
+ ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,11 +31,30 @@
 
 <main class="form-signin text-center">
 
-  <form action="" method="POST">
+  <form action="../controller/login_adm.php" method="POST">
 
     <img class="mb-4" src="../../resources/img/imgnavbar.png" alt="" width="54" height="54">
 
     <h1 class="h3 mb-3 fw-normal text-white">Entrar</h1>
+
+    <!--mensagem de erro 
+  
+      < php 
+    //  if(isset($_SESSION['nao_autenticado']));
+    //  se o usuario nao tiver autenticado mostrar msg de erro
+      ?>
+
+      <div>
+        <p class="fs-1 text-white">Usuario ou senha invalido</p>
+      </div>
+
+      <php 
+    //    unset($_SESSION['nao_autenticado']); //tirar a msg para novos usuarios
+    //    endif; 
+
+      ?>
+
+    mensagem de erro fim -->
 
     <div class="form-floating">
       <input value="cpf" type="text" class="form-control" id="floatingInput" placeholder="122.208.404.09">
@@ -52,6 +75,7 @@
     </div>
 
     <button class="w-100 btn btn-lg btn-primary" type="submit">Entrar</button>
+    
     <p class="mt-5 mb-3 text-white">©2022 Uninassau Company, Inc</p>
   </form>
 

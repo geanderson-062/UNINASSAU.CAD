@@ -1,3 +1,8 @@
+<?php 
+     session_start();
+     include('../verifica_login.php');
+ ?>
+
 <html lang="pt-br"><head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -27,7 +32,7 @@
     
       <li><hr class="dropdown-divider"></li>
 
-      <li><a class="dropdown-item text-danger" href="../../../index.html">sair
+      <li><a class="dropdown-item text-danger" href="../logout.php">sair
         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
           <path fill-rule="evenodd" d="M13.854 2.146a.5.5 0 0 1 0 .708l-11 11a.5.5 0 0 1-.708-.708l11-11a.5.5 0 0 1 .708 0Z"/>
           <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
@@ -120,7 +125,7 @@
 
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4 bg-light"><div class="chartjs-size-monitor"><div class="chartjs-size-monitor-expand"><div class=""></div></div><div class="chartjs-size-monitor-shrink"><div class=""></div></div></div>
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard Administrador</h1>
+        <h1 class="h2">Dashboard Administrador <?php echo $_SESSION['usuario'];?></h1>
         <div class="btn-toolbar mb-2 mb-md-0">
         
           <div class="dropdown">
