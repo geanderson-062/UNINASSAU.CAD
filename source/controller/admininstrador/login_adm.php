@@ -7,7 +7,7 @@ include ('conexao_adm.php');//incluidno arquivo de conecxao do banco de dados
 if (empty($_POST['cpf']) || empty($_POST['senha']));{
   
     //se o cpf e senha estiver vazio direcione para 
-    header('Location: ../index.html');
+    header('Location: tela_de_login_adm.php');
       exit();//encerrar operação
 } 
 
@@ -28,7 +28,7 @@ if($row == 1) {
 
   //se o usuario tiver logado va para dashboard
   $_SESSION['cpf'] = $cpf;//verificando se tao igual
-  header('Location: ../../private/dashboard_adm.html');
+  header('Location: dashboard_adm.php');
   exit();//finalizando operação
 
 }
@@ -36,7 +36,7 @@ else{
 
   //caso não estivel logado va para login novamente
   $_SESSION['nao_autenticado'] = true;//quando o usuario for invalido
-  header('Location: ../../../views/login_adm.html');
+  header('Location: tela_de_login_adm.html');
   exit();//finalizando operação
 
 }

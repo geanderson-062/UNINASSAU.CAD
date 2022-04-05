@@ -24,7 +24,7 @@
 <link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
 <meta name="theme-color" content="#7952b3">
 
-<link rel="stylesheet" href="../../resources/css/login.css">
+<link rel="stylesheet" href="../../../resources/css/login.css">
 
   </head>
   <body>
@@ -33,7 +33,7 @@
 
   <form action="login_adm.php" method="POST">
 
-    <img class="mb-4" src="../../resources/img/imgnavbar.png" alt="" width="54" height="54">
+    <img class="mb-4" src="../../../resources/img/imgnavbar.png" alt="" width="54" height="54">
 
     <h1 class="h3 mb-3 fw-normal text-white">Entrar</h1>
 
@@ -57,14 +57,14 @@
     mensagem de erro fim -->
 
     <div class="form-floating">
-      <input value="cpf" type="text" class="form-control" id="floatingInput" placeholder="122.208.404.09">
+      <input name="cpf" type="text" class="form-control" id="floatingInput" placeholder="122.208.404.09">
       <label for="floatingInput">Cpf</label>
     </div>
 <div>
 <br>
 </div>
     <div class="form-floating">
-      <input value="senha" type="password" class="form-control" id="floatingPassword"  placeholder="123ola321">
+      <input name="senha" type="password" class="form-control" id="floatingPassword"  placeholder="123ola321">
       <label for="floatingPassword">Senha</label>
     </div>
 
@@ -81,7 +81,7 @@
 
 </main>
 
-<script src="../../resources/JS/exibir_senha.js"></script>
+<script src="../../../resources/JS/exibir_senha.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
     
   </body>
