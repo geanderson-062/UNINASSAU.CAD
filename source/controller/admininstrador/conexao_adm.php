@@ -1,15 +1,18 @@
 <?php 
 
-define('HOST', '127.0.0.1:3306'); //ip do banco de dados 
+$servidor="localhost"; //servidor usado
+$usuario="root";//usuario do banco
+$senha="147258369";//senha do banco
+$dbname="praticaprofissionalads5";//nome do banco
 
-define('USUARIO', 'root'); // nome de usuario do banco 
+$conexao = mysqli_connect($servidor,$usuario,$senha,$dbname);
+//conectando mysql com as vareaveis declaracadas a cima 
 
-define('SENHA', '147258369'); // senha do banco de daddos 
+if(!$conexao){
+   
+    //se casp não tiver conexao mostrar o erro
+    die ("Houve um erro ".mysqli_connect_error());
 
-define('DB', 'praticaprofissionalads5'); // nome  do banco  de dados 
+}
 
-$conexao = mysqli_connect(HOST, USUARIO, SENHA, DB) or die ('Não foi possivel conectar');
-//conectando mysql com HOST, USUARIO, SENHA, DB 
-// o or die diz que caso não consiga de a msg Não foi possivel conectar
-
- 
+?>
