@@ -1,4 +1,4 @@
-p<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="PTBR">
 <head>
     <meta charset="UTF-8">

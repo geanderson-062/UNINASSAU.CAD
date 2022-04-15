@@ -94,9 +94,9 @@
                 Cadastrar
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                <li><a class="dropdown-item" href="cadastra_coordenador.php">Cadastrar coodenadores</a></li>
-                <li><a class="dropdown-item" href="cadastra_adm.php">Cadastrar administradores</a></li>
-                <li><a class="dropdown-item" href="cadastra_visita.php">Cadastrar visitas</a></li>
+              <li><a class="dropdown-item" href="tela_de_cadastro_coordenador.php">Cadastrar coodenadores</a></li>
+              <li><a class="dropdown-item" href="tela_de_cadastro_adm.php">Cadastrar administradores</a></li>
+              <li><a class="dropdown-item" href="tela_de_cadastro_visita.php">Cadastrar visitas</a></li>
               </ul>
             </div>
           </li>

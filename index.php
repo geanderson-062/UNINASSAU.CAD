@@ -83,12 +83,20 @@
     </section>
 
 <div>
+
   <br>
   <br>
   <br>
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 
 
 </div>
@@ -97,16 +105,20 @@
 
   <footer class="py-3 my-4 corPrimaria">
  
-    <p class="text-center text-white">© 2022 Uninassau Company, Inc</p>
-    <p class="text-center text-white">Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel
+  <p class="text-center text-white">
 
-      <br>
-      <br>
+    <a class="text-white text-center" href="source/views/politica_de_uso_e_privacidade.html">Politica de uso e privacidade</a>
+ 
+    <br>
       
-      <a class="text-white" href="source/views/politica_de_uso_e_privacidade.html">Politica de uso e privacidade</a>
+    © 2022 Uninassau Company, Inc
 
-    </p>
-
+    <br>
+  
+    Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel
+  
+  </p> 
+    
   </footer>
 
 
