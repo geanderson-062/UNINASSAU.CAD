@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="generator" content="Hugo 0.88.1">
-    <title>Login Administrador</title>
+    <title>Login Coordenador</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/sign-in/">
 
@@ -44,7 +44,7 @@
 
 <main class="form-signin text-center">
 
-  <form action="login_adm.php" method="POST">
+  <form action="login_coordenador.php" method="POST">
 
     <img class="mb-4" src="../../../resources/img/imgnavbar.png" alt="" width="54" height="54">
 

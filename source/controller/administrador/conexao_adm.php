@@ -3,7 +3,7 @@
 $servidor="localhost"; //servidor usado
 $usuario="root";//usuario do banco
 $senha="";//senha do banco se tiver senha e esta 147258369
-$dbname="praticaprofissionalads5";//nome do banco
+$dbname="ads5periodo";//nome do banco
 
 $conexao = mysqli_connect($servidor,$usuario,$senha,$dbname);
 //conectando mysql com as vareaveis declaracadas a cima 
