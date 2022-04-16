@@ -1,5 +1,5 @@
 <?php
-include '../controller/FPDF/fpdf.php';
+include '../FPDF/fpdf.php';
 
 $pdf = new FPDF();
 $pdf->AddPage();
