@@ -1,6 +1,0 @@
-
-colocar metodo como post no formulario 
-
-colocar parametro action no form direcionamdo para o login do coorenador e do adm 
-
-colocar parametro nos input como name pegando o cpf e senha 

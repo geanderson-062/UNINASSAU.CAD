@@ -9,6 +9,28 @@
     
     <link rel="stylesheet" href="resources/css/style.css">
 
+   <!--favicon-->
+
+   <link rel="apple-touch-icon" sizes="57x57" href="resources/img/favicon/apple-icon-57x57.png">
+   <link rel="apple-touch-icon" sizes="60x60" href="resources/img/favicon/apple-icon-60x60.png">
+   <link rel="apple-touch-icon" sizes="72x72" href="resources/img/favicon/apple-icon-72x72.png">
+   <link rel="apple-touch-icon" sizes="76x76" href="resources/img/favicon/apple-icon-76x76.png">
+   <link rel="apple-touch-icon" sizes="114x114" href="resources/img/favicon/apple-icon-114x114.png">
+   <link rel="apple-touch-icon" sizes="120x120" href="resources/img/favicon/apple-icon-120x120.png">
+   <link rel="apple-touch-icon" sizes="144x144" href="resources/img/favicon/apple-icon-144x144.png">
+   <link rel="apple-touch-icon" sizes="152x152" href="resources/img/favicon/apple-icon-152x152.png">
+   <link rel="apple-touch-icon" sizes="180x180" href="resources/img/favicon/apple-icon-180x180.png">
+   <link rel="icon" type="image/png" sizes="192x192"  href="resources/img/favicon/android-icon-192x192.png">
+   <link rel="icon" type="image/png" sizes="32x32" href="resources/img/favicon/favicon-32x32.png">
+   <link rel="icon" type="image/png" sizes="96x96" href="resources/img/favicon/favicon-96x96.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="resources/img/favicon/favicon-16x16.png">
+   <link rel="manifest" href="resources/img/favicon/manifest.json">
+   <meta name="msapplication-TileColor" content="#ffffff">
+   <meta name="msapplication-TileImage" content="resources/img/favicon/ms-icon-144x144.png">
+   <meta name="theme-color" content="#ffffff">
+
+   <!--favicon-->
+
 </head>
 <body  style="background-color: rgb(41, 63, 136);">
 
@@ -40,7 +62,7 @@
          
            <br>
 
-          <a href="source/controller/coordenador/tela_de_login_cordenador.html" type="button" class="btn btn-outline-primary">
+          <a href="source/controller/coordenador/tela_de_login_coordenador.php" type="button" class="btn btn-outline-primary">
             Cordenador
             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
@@ -61,12 +83,20 @@
     </section>
 
 <div>
+
   <br>
   <br>
   <br>
   <br>
   <br>
   <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
 
 
 </div>
@@ -75,16 +105,20 @@
 
   <footer class="py-3 my-4 corPrimaria">
  
-    <p class="text-center text-white">© 2022 Uninassau Company, Inc</p>
-    <p class="text-center text-white">Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel
+  <p class="text-center text-white">
 
-      <br>
-      <br>
+    <a class="text-white text-center" href="source/views/politica_de_uso_e_privacidade.html">Politica de uso e privacidade</a>
+ 
+    <br>
       
-      <a class="text-white" href="source/views/politica_de_uso_e_privacidade.html">Politica de uso e privacidade</a>
+    © 2022 Uninassau Company, Inc
 
-    </p>
-
+    <br>
+  
+    Sistema web desenvolvido por Geanderson Ferreira & Viviane Raquel
+  
+  </p> 
+    
   </footer>
 
 
