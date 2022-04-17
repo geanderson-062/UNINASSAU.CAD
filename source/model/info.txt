@@ -1,6 +1,12 @@
-Website for ads-5-periodo-uninassau.infinityfree
+Hospedagem: 
 
-senha: Adsuninassau5periodo
+senha: ads5periodoGean&Viviane
+
+dbname: id18794868_ads5periodo
+
+usuario: id18794868_root
+
+localhost:localhost
 
 ////////////////////////////////////////////////////
 

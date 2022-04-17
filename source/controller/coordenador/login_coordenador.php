@@ -1,6 +1,6 @@
 <?php
 session_start();
-include ('conexao_coordenador.php');//incluidno arquivo de conecxao do banco de dados
+include ('../conexao.php');//incluidno arquivo de conecxao do banco de dados
 
 $cpf = $_POST['cpf'];
 $senha = $_POST['senha'];

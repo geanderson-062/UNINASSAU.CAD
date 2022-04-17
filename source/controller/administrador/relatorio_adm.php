@@ -1,6 +1,6 @@
 <?php
 include '../FPDF/fpdf.php';//incluindo arquivo de pdf
-include 'conexao_adm.php';//incluindo conecxao como banco
+include '../conexao.php';//incluindo conecxao como banco
 
 // Manual rapido
 // 1 = quebrar linha

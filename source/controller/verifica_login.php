@@ -1,10 +1,10 @@
 <?php
 
 //se tentar entrar pela url sem o login vai redirecionar para index
-session_start();
+//session_start();
 if(!$_SESSION['usuario']) {
 
-    header('Location: ../../../index.php');
+    header('Location: tela_de_login_coordenador.php');
     exit();
     
 }

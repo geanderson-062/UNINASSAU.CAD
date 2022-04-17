@@ -1,6 +1,6 @@
 <?php 
      session_start();
-     include('verifica_login.php');
+     include('../verifica_login.php');
  ?>
 
 <html lang="pt-br"><head>
