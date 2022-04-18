@@ -281,16 +281,17 @@ while ($linha= mysqli_fetch_assoc ( $dados2)) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
-        <input type="hidden" name="nomeCDN" ID="cod_pessoa1" value="">
-        <input type="text" name="idCDN" ID="cod_pessoa" value="">
+        <input type="hidden" name="nomeCDN" ID="cod_pessoa2" value="">
+        <input type="text" name="idCDN" ID="codCDN_pessoa" value="">
         <input type="submit" class="btn btn-danger" value="Confirmar">
         <script type="text/Javascript">
 
 function pegar_dados(idCDN, nomeCDN){
 
     document.getElementById("nomeCDN_pessoa").innerHTML = nomeCDN; 
-    document.getElementById("cod_pessoa1").value = idCDN; 
-    document.getElementById("cod_pessoa").value = nomeCDN;
+    document.getElementById("cod_pessoa2").value = nomeCDN;
+    document.getElementById("codCDN_pessoa").value = idCDN; 
+   
 
 }
 
