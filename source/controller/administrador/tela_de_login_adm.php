@@ -51,14 +51,14 @@
     <h1 class="h3 mb-3 fw-normal text-white">Entrar</h1>
 
     <div class="form-floating">
-      <input required name="cpf" type="text" class="form-control" id="floatingInput" placeholder="Ex = 122.208.404.09">
+      <input required name="cpfADM" type="text" class="form-control" id="floatingInput" placeholder="Ex = 122.208.404.09">
       <label for="floatingInput">Cpf</label>
     </div>
 <div>
 <br>
 </div>
     <div class="form-floating">
-      <input required name="senha" type="password" class="form-control" id="floatingPassword"  placeholder="Ex = 123ola321">
+      <input required name="senhaADM" type="password" class="form-control" id="floatingPassword"  placeholder="Ex = 123ola321">
       <label for="floatingPassword">Senha</label>
     </div>
 

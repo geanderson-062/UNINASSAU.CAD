@@ -2,11 +2,11 @@
 session_start();
 include ('../conexao.php');//incluidno arquivo de conecxao do banco de dados
 
-$cpf = $_POST['cpf'];
-$senha = $_POST['senha'];
+$cpfCDN = $_POST['cpfCDN'];
+$senhaCDN = $_POST['senhaCDN'];
 
 //verificar se o login está certou ou não 
-$query = "SELECT * FROM login_coordenador where cpf = $cpf and senha = md5($senha)";
+$query = "SELECT * FROM coordenador where cpfCDN = $cpfCDN and senhaCDN = md5($senhaCDN)";
 
 //executando a aquery montada acima
 $result = mysqli_query($conexao, $query);
@@ -17,7 +17,7 @@ $row = mysqli_num_rows($result);
 if($row > 0) {
 
   //se o usuario tiver logado va para dashboard
-  $_SESSION['usuario'] = $cpf;//verificando se tao igual
+  $_SESSION['usuario'] = $cpfCDN;//verificando se tao igual
   header('Location: dashboard_coordenador.php');
   exit();//finalizando operação
 

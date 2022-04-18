@@ -19,7 +19,7 @@ $pdf->SetY(12);
 $pdf->Image('../../resources/img/imgnavbar.png, 1,1, -100');
 
 //selecionando as tabelas que vao trazer os dados 
-$sql = $pdo->prepare("SELECT * FROM cadastro_visitas,cadastro_coordenador,cadastro_adm");
+$sql = $pdo->prepare("SELECT * FROM `visitas`");
 
 //executando  
 $sql->execute();
@@ -27,16 +27,16 @@ $sql->execute();
    //parametros do conteudo da tabela
     
    $pdf->SetFillColor(10,0,0);//colocando cor de fundo do campo
-   $pdf->Cell(5,2, 'Nome' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
+   $pdf->Cell(5,2, 'Usuario' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
 
    $pdf->SetFillColor(10,0,0);//colocando cor de fundo do campo
-   $pdf->Cell(5,2, 'Cpf' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
+   $pdf->Cell(5,2, 'Setor' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
 
    $pdf->SetFillColor(10,0,0);//colocando cor de fundo do campo
-   $pdf->Cell(5,2, 'Telefone' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
+   $pdf->Cell(5,2, 'Escola' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
 
    $pdf->SetFillColor(10,0,0);//colocando cor de fundo do campo
-   $pdf->Cell(5,2, 'Senha' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
+   $pdf->Cell(5,2, 'Q.alunos' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
 
    $pdf->SetFillColor(10,0,0);//colocando cor de fundo do campo
    $pdf->Cell(5,2, 'Funcao' ,1,0,'c', TRUE);//TRUE determina que a cor funcione no campo
@@ -46,15 +46,19 @@ $sql->execute();
 
    //colocar os parametros da tabela 
     
-   $pdf->Cell(5,2, $resultado['$nome'],1,0,'c');
+   $pdf->Cell(5,2, $resultado['$usuarioVST'],1,0,'c');
  
-   $pdf->Cell(5,2, $resultado['$cpf'],1,0,'c');
+   $pdf->Cell(5,2, $resultado['$setorVST'],1,0,'c');
  
-   $pdf->Cell(5,2, $resultado['$telefone'],1,0,'c');
+   $pdf->Cell(5,2, $resultado['$escolaVST'],1,0,'c');
  
-   $pdf->Cell(5,2, $resultado['$senha'],1,0,'c');
+   $pdf->Cell(5,2, $resultado['$alunosVST'],1,0,'c');
 
-   $pdf->Cell(5,2, $resultado['$funcao'],1,1,'c');
+   $pdf->Cell(5,2, $resultado['$conteudoVST'],1,0,'c');
+
+   $pdf->Cell(5,2, $resultado['$professorVST'],1,0,'c');
+
+   $pdf->Cell(5,2, $resultado['$dataVST'],1,1,'c');
    
 }
 
