@@ -1,10 +1,28 @@
+<?php
+
+//incluindo arquivo de conexao 
+include "../conexao.php";
+
+//pegando o id 
+$id= $_GET ['id']?? '';
+
+//selecionando a tabela 
+$sql3= "SELECT * FROM `visitas` WHERE id = $id";
+
+
+//colocando vareaveis para editar
+$dados3 = mysqli_query($conexao , $sql3);
+$linha = mysqli_fetch_assoc ($dados3);
+
+?>
+
 <!DOCTYPE html>
 <html lang="PTBR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de administradores</title>
+    <title>Atualizar dados do Coordenador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../../../resources/css/style.css">
@@ -50,37 +68,43 @@
     </div>
 
       <div>
-        <p class="fs-2 text-center">Cadastrar Administradores</p>
+        <p class="fs-2 text-center">Atualizar dados da visita</p>
       </div>
 
      
       <section class="container" style="max-width: 360px;">
-        <form method="post" action="cadastra_administrador.php">
+        <form method="post" action="vst_edit_script.php">
             
           <div class="mb-3">
-            <label for="nomeADM" class="form-label">Nome:</label>
-            <input required name="nomeADM" type="text" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+            <label for="usuarioVST" class="form-label">Usuario:</label>
+            <input required name="usuarioVST" type="text" class="form-control" id="usuarioVST" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus value="<?php echo $linha ['usuarioVST'];?>">    
           </div>
           <div class="mb-3">
-            <label for="telefoneADM" class="form-label">Telefone:</label>
-            <input required name="telefoneADM" type="text" class="form-control" id="telefoneADM" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
+            <label for="setorVST" class="form-label">Setor:</label>
+            <input required name="setorVST" type="text" class="form-control" id="setorVST" aria-describedby="emailHelp" placeholder="Ex: 89196517" value="<?php echo $linha ['setorVST'];?>">    
           </div>
           <div class="mb-3">
-            <label for="cpfADM" class="form-label">Cpf:</label>
-            <input required name="cpfADM" type="text" class="form-control" id="cpfADM" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
+            <label for="escolaVST" class="form-label">Escola:</label>
+            <input required name="escolaVST" type="text" class="form-control" id="escolaVST" aria-describedby="emailHelp" placeholder="Ex: 12220840409" value="<?php echo $linha ['escolaVST'];?>">
           </div>
           <div class="mb-3">
-            <label for="senhaADM" class="form-label">Senha:</label>
-            <input required name="senhaADM" type="text" class="form-control" id="senhaADM" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
+            <label for="alunosVST" class="form-label">Quantidade de Alunos:</label>
+            <input required name="alunosVST" type="text" class="form-control" id="alunosVST" aria-describedby="emailHelp" placeholder="Ex: 123marcones321" value="<?php echo $linha ['alunosVST'];?>">
           </div>
           <div class="mb-3">
-            <label for="tipoADM" class="form-label">Tipo:</label>
-            <input required name="tipoADM" type="text" class="form-control" id="tipoADM" aria-describedby="emailHelp" placeholder="Ex: Administrador ">
+            <label for="conteudoVST" class="form-label"> Conteúdo abordado no dia:</label>
+            <input required name="conteudoVST" type="text" class="form-control" id="conteudoVST" aria-describedby="emailHelp" placeholder="Ex: Administrador " value="<?php echo $linha ['conteudoVST'];?>">
+          </div>
+          <div class="mb-3">
+            <label for="professorVST" class="form-label"> Professor responsável:</label>
+            <input required name="professorVST" type="text" class="form-control" id="professorVST" aria-describedby="emailHelp" placeholder="Ex: Daniel leite viana " value="<?php echo $linha ['professorVST'];?>">
           </div>
          
           <div class="d-grid gap-2 col-6 mx-auto">
 
-            <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Cadastrar">
+            <input type="submit" class="btn btn-primary"  name="submit" id="submit"  value="Alterar">
+            <input type="hidden" name="id" value="<?php echo $linha ['id'];?>" >
+
              
           </div>
             

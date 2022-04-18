@@ -59,34 +59,30 @@
         <form method="post" action="cadastra_coordenador.php">
 
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Nome:</label>
-              <input name="nome" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+              <label for="nomeCDN" class="form-label">Nome:</label>
+              <input required name="nomeCDN" type="text" class="form-control" id="nomeCDN" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Telefone:</label>
-              <input name="telefone" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
+              <label for="telefoneCDN" class="form-label">Telefone:</label>
+              <input required name="telefoneCDN" type="text" class="form-control" id="telefoneCDN" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Cpf:</label>
-              <input name="cpf" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
+              <label for="cpfCDN" class="form-label">Cpf:</label>
+              <input required name="cpfCDN" type="text" class="form-control" id="cpfCDN" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Senha:</label>
-              <input name="senha" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
+              <label for="senhaCDN" class="form-label">Senha:</label>
+              <input required name="senhaCDN" type="text" class="form-control" id="senhaCDN" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
             </div>
             <div class="mb-3">
-              <label for="exampleInputEmail1" class="form-label">Tipo:</label>
-              <input name="tipo" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value="coordenador" placeholder="Ex: Coordenador">
+              <label for="tipoCDN" class="form-label">Tipo:</label>
+              <input required name="tipoCDN" type="text" class="form-control" id="tipoCDN" aria-describedby="emailHelp" value="coordenador" placeholder="Ex: Coordenador">
             </div>
          
             <div class="d-grid gap-2 col-6 mx-auto">
 
-              <button class="btn btn-primary" type="button">Cadastrar
-                <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
-                  <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
-                </svg>
-              </button>
-          
+            <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Cadastrar">
+                   
             </div>
 
           </form>

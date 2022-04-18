@@ -1,10 +1,28 @@
+<?php
+
+//incluindo arquivo de conexao 
+include "../conexao.php";
+
+//pegando o id 
+$idCDN= $_GET ['idCDN']?? '';
+
+//selecionando a tabela 
+$sql2= "SELECT * FROM `coordenador` WHERE idCDN = $idCDN";
+
+
+//colocando vareaveis para editar
+$dados2 = mysqli_query($conexao , $sql2);
+$linha = mysqli_fetch_assoc ($dados2);
+
+?>
+
 <!DOCTYPE html>
 <html lang="PTBR">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de administradores</title>
+    <title>Atualizar dados do Coordenador</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     
     <link rel="stylesheet" href="../../../resources/css/style.css">
@@ -50,37 +68,39 @@
     </div>
 
       <div>
-        <p class="fs-2 text-center">Cadastrar Administradores</p>
+        <p class="fs-2 text-center">Atualizar dados do Coordenador</p>
       </div>
 
      
       <section class="container" style="max-width: 360px;">
-        <form method="post" action="cadastra_administrador.php">
+        <form method="post" action="cdn_edit_script.php">
             
           <div class="mb-3">
-            <label for="nomeADM" class="form-label">Nome:</label>
-            <input required name="nomeADM" type="text" class="form-control" id="nomeADM" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus>    
+            <label for="nomeCDN" class="form-label">Nome:</label>
+            <input required name="nomeCDN" type="text" class="form-control" id="nomeCDN" aria-describedby="emailHelp" placeholder="Ex: José Marcones Lira" autofocus value="<?php echo $linha ['nomeCDN'];?>">    
           </div>
           <div class="mb-3">
-            <label for="telefoneADM" class="form-label">Telefone:</label>
-            <input required name="telefoneADM" type="text" class="form-control" id="telefoneADM" aria-describedby="emailHelp" placeholder="Ex: 89196517">    
+            <label for="telefoneCDN" class="form-label">Telefone:</label>
+            <input required name="telefoneCDN" type="text" class="form-control" id="telefoneCDN" aria-describedby="emailHelp" placeholder="Ex: 89196517" value="<?php echo $linha ['telefoneCDN'];?>">    
           </div>
           <div class="mb-3">
-            <label for="cpfADM" class="form-label">Cpf:</label>
-            <input required name="cpfADM" type="text" class="form-control" id="cpfADM" aria-describedby="emailHelp" placeholder="Ex: 12220840409">
+            <label for="cpfCDN" class="form-label">Cpf:</label>
+            <input required name="cpfCDN" type="text" class="form-control" id="cpfCDN" aria-describedby="emailHelp" placeholder="Ex: 12220840409" value="<?php echo $linha ['cpfCDN'];?>">
           </div>
           <div class="mb-3">
-            <label for="senhaADM" class="form-label">Senha:</label>
-            <input required name="senhaADM" type="text" class="form-control" id="senhaADM" aria-describedby="emailHelp" placeholder="Ex: 123marcones321">
+            <label for="senhaCDN" class="form-label">Senha:</label>
+            <input required name="senhaCDN" type="text" class="form-control" id="senhaCDN" aria-describedby="emailHelp" placeholder="Ex: 123marcones321" value="<?php echo $linha ['senhaCDN'];?>">
           </div>
           <div class="mb-3">
-            <label for="tipoADM" class="form-label">Tipo:</label>
-            <input required name="tipoADM" type="text" class="form-control" id="tipoADM" aria-describedby="emailHelp" placeholder="Ex: Administrador ">
+            <label for="tipoCDN" class="form-label">Tipo:</label>
+            <input required name="tipoCDN" type="text" class="form-control" id="tipoCDN" aria-describedby="emailHelp" placeholder="Ex: Administrador " value="<?php echo $linha ['tipoCDN'];?>">
           </div>
          
           <div class="d-grid gap-2 col-6 mx-auto">
 
-            <input type="submit" class="btn btn-primary"  name="submit" id="submit" type="submit" value="Cadastrar">
+            <input type="submit" class="btn btn-primary"  name="submit" id="submit"  value="Alterar">
+            <input type="hidden" name="idCDN" value="<?php echo $linha ['idCDN'];?>" >
+
              
           </div>
             

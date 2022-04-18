@@ -1,9 +1,9 @@
 <?php 
 
 $servidor="localhost"; //servidor usado
-$usuario="id18794868_root";//usuario do banco
-$senha="ads5periodoGean&Viviane";//senha do banco se tiver senha e esta 147258369
-$dbname="id18794868_ads5periodo";//nome do banco
+$usuario="root";//usuario do banco
+$senha="";//senha do banco se tiver senha e esta 147258369
+$dbname="definitivo";//nome do banco
 
 $conexao = mysqli_connect($servidor,$usuario,$senha,$dbname);
 //conectando mysql com as vareaveis declaracadas a cima 
