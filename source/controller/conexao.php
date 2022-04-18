@@ -1,16 +1,16 @@
 <?php 
 
 $servidor="localhost"; //servidor usado
-$usuario="root";//usuario do banco
-$senha="";//senha do banco se tiver senha e esta 147258369
-$dbname="definitivo";//nome do banco
+$usuario="id18794868_root";//usuario do banco
+$senha="ads5periodoGean&Viviane";//senha do banco se tiver senha e esta 147258369
+$dbname="id18794868_ads5periodo";//nome do banco
 
 $conexao = mysqli_connect($servidor,$usuario,$senha,$dbname);
 //conectando mysql com as vareaveis declaracadas a cima 
 
 if(!$conexao){
    
-    //se casp não tiver conexao mostrar o erro
+    //se caso não tiver conexao mostrar o erro
     die ("Houve um erro ".mysqli_connect_error());
 
 }

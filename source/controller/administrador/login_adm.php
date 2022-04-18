@@ -2,11 +2,11 @@
 session_start();
 include ('../conexao.php');//incluidno arquivo de conecxao do banco de dados
 
-$cpf = $_POST['cpf'];
-$senha = $_POST['senha'];
+$cpfADM = $_POST['cpfADM'];
+$senhaADM = $_POST['senhaADM'];
 
 //verificar se o login está certou ou não 
-$query = "SELECT * FROM login_adm where cpf = $cpf and senha = md5($senha)";
+$query = "SELECT * FROM administrador where cpfADM = $cpfADM and senhaADM = md5($senhaADM)";
 
 //executando a aquery montada acima
 $result = mysqli_query($conexao, $query);
@@ -17,7 +17,7 @@ $row = mysqli_num_rows($result);
 if($row > 0) {
 
   //se o usuario tiver logado va para dashboard
-  $_SESSION['usuario'] = $cpf;//verificando se tao igual
+  $_SESSION['usuario'] = $cpfADM;//verificando se tao igual
   header('Location: dashboard_adm.php');
   exit();//finalizando operação
 
