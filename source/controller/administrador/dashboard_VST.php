@@ -6,11 +6,9 @@
     include('../conexao.php');
 
     //pegando os dados das tabelas e transformando em vareaveis
-    $sql = "SELECT * FROM `administrador`";
-    $sql2 = "SELECT * FROM `coordenador` ";
+    
     $sql3 = "SELECT * FROM `visitas`";
-    $dados= mysqli_query($conexao,$sql);
-    $dados2= mysqli_query($conexao,$sql2);
+    
     $dados3= mysqli_query($conexao,$sql3);
  ?>
 
@@ -301,7 +299,7 @@ function pegar_dados(id, usuarioVST){
     document.getElementById("cod_pessoa").value = id;
 
 }
-
+</script>
 </form>
 
 
@@ -314,4 +312,6 @@ function pegar_dados(id, usuarioVST){
     
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-</body></html>
+</body>
+
+</html>
