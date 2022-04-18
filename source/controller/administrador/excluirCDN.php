@@ -2,22 +2,20 @@
 
 include "../conexao.php";
 
-$id = $_POST ['id'];
-$usuarioVST= $_POST ['usuarioVST'];
+$idCDN = $_POST ['idCDN'];
+$nomeCDN= $_POST ['nomeCDN'];
 
 
 
 
 
-$sql= "DELETE FROM `visitas` WHERE id=$id" ;
+$sql2= "SELECT * FROM `coordenador` WHERE idCDN=$idCDN" ;
 
 
-if (mysqli_query($conexao , $sql)) {
+if (mysqli_query($conexao , $sql2)) {
 
     mensagem("$nome, Excluido com sucesso" , 'success');
 }else {
 
     mensagem("$nome, NÃO Excluido com sucesso" , 'danger');
 }
-
-

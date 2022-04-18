@@ -7,8 +7,11 @@
 
     //pegando os dados das tabelas e transformando em vareaveis
     $sql = "SELECT * FROM `administrador`";
+    $sql2 = "SELECT * FROM `coordenador` ";
+    $sql3 = "SELECT * FROM `visitas`";
     $dados= mysqli_query($conexao,$sql);
-    
+    $dados2= mysqli_query($conexao,$sql2);
+    $dados3= mysqli_query($conexao,$sql3);
  ?>
 
 <html lang="pt-br"><head>
@@ -197,9 +200,8 @@
           <br>
         </div>
 
-      <!--seção dos administradores-->
-
-      <h2 id="adm">Administradores cadastrados</h2> <!--titulo da tabela-->
+    
+      <h2 id="coordenador">Coordenadores cadastrados</h2> <!--titulo da tabela-->
 
       <div>
         <br>
@@ -211,10 +213,10 @@
           <!--tabela inicio-->
 
         <table class="table table-sm"> <!--deixar ela listrada table-striped-->
-         
+       
         <thead>
             <tr>
-              
+
               <th scope="col"><p class="fs-5">Nome</p></th>
               <th scope="col"><p class="fs-5">Cpf</p></th>
               <th scope="col"><p class="fs-5">Telefone</p></th>
@@ -226,42 +228,45 @@
           </thead>
 
           <tbody>
-                  
           <?php
 
-//recebendo varevel dados 
-while ($linha= mysqli_fetch_assoc ( $dados)) {
+while ($linha= mysqli_fetch_assoc ( $dados2)) {
    
-   //pegando os dados da vareavel dados e colocando em novas vareaveis e colocando na tabela
-
-   $idADM = $linha ['idADM'];
-   $nomeADM= $linha ['nomeADM'];
-   $cpfADM= $linha ['cpfADM'];
-   $telefoneADM= $linha ['telefoneADM'];
-   $senhaADM= $linha ['senhaADM'];
-   $tipoADM= $linha ['tipoADM'];
+   $idCDN = $linha ['idCDN'];
+   $nomeCDN= $linha ['nomeCDN'];
+   $cpfCDN= $linha ['cpfCDN'];
+   $telefoneCDN= $linha ['telefoneCDN'];
+   $senhaCDN= $linha ['senhaCDN'];
+   $tipoCDN= $linha ['tipoCDN'];
 
 
     echo "<tr>
-    <th scope='row'>$nomeADM</th>
-    <td>$cpfADM</td>
-    <td>$telefoneADM</td>
-    <td>$senhaADM</td>
-    <td>$tipoADM</td>
-    <td>
-    <a href='adit_adm.php? idADM=$idADM' class='btn btn-success'> Editar </a>
-    
+    <th scope='row'>$nomeCDN</th>
+    <td>$cpfCDN</td>
+    <td>$telefoneCDN</td>
+    <td>$senhaCDN</td>
+    <td>$tipoCDN</td>
+    <td> <a href='edit_cdn.php? idCDN=$idCDN' class='btn btn-success'> Editar </a>
+    <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
+    onClick= " . '"' . "pegar_dados( $idCDN , '$nomeCDN')" . '"'. ">Excluir</a>
+    </td>
     
   </tr>";
 }
 
 ?>
-         
           </tbody>
 
         </table>
 
-        <!--fim da tabela dos adm-->
+        <!--fim da tabela dos coordenadores-->
+
+      <div>
+        <br>
+        <br>
+        <br>
+      </div>
+
 
 
 

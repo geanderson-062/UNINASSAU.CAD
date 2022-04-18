@@ -7,8 +7,11 @@
 
     //pegando os dados das tabelas e transformando em vareaveis
     $sql = "SELECT * FROM `administrador`";
+    $sql2 = "SELECT * FROM `coordenador` ";
+    $sql3 = "SELECT * FROM `visitas`";
     $dados= mysqli_query($conexao,$sql);
-    
+    $dados2= mysqli_query($conexao,$sql2);
+    $dados3= mysqli_query($conexao,$sql3);
  ?>
 
 <html lang="pt-br"><head>
@@ -197,9 +200,7 @@
           <br>
         </div>
 
-      <!--seção dos administradores-->
-
-      <h2 id="adm">Administradores cadastrados</h2> <!--titulo da tabela-->
+      <h2 id="visita" >Visitas cadastradas</h2> <!--titulo da tabela-->
 
       <div>
         <br>
@@ -211,46 +212,49 @@
           <!--tabela inicio-->
 
         <table class="table table-sm"> <!--deixar ela listrada table-striped-->
-         
-        <thead>
+          <thead>
             <tr>
-              
-              <th scope="col"><p class="fs-5">Nome</p></th>
-              <th scope="col"><p class="fs-5">Cpf</p></th>
-              <th scope="col"><p class="fs-5">Telefone</p></th>
-              <th scope="col"><p class="fs-5">Senha</p></th>
-              <th scope="col"><p class="fs-5">Função</p></th>
-              <th scope="col"><p class="fs-5">Opções</p></th>
+
+              <th scope="col"><p class="fs-5">Usuário</p></th>
+              <th scope="col"><p class="fs-5">Setor</p></th>
+              <th scope="col"><p class="fs-5">Escola</p></th>
+              <th scope="col"><p class="fs-5">Q.alunos</p></th>
+              <th scope="col"><p class="fs-5">Assunto</p></th>
+              <th scope="col"><p class="fs-5">Responsavel</p></th>
+              <th scope="col"><p class="fs-5">Data</p></th>
+              <th scope="col"><p class="fs-5">opções</p></th>
 
             </tr>
           </thead>
 
           <tbody>
-                  
           <?php
 
-//recebendo varevel dados 
-while ($linha= mysqli_fetch_assoc ( $dados)) {
+while ($linha= mysqli_fetch_assoc ( $dados3)) {
    
-   //pegando os dados da vareavel dados e colocando em novas vareaveis e colocando na tabela
+   $id = $linha ['id'];
+   $usuarioVST= $linha ['usuarioVST'];
+   $setorVST= $linha ['setorVST'];
+   $escolaVST= $linha ['escolaVST'];
+   $alunosVST= $linha ['alunosVST'];
+   $conteudoVST= $linha ['conteudoVST'];
+   $professorVST= $linha ['professorVST'];
+   $dataVST= $linha ['dataVST'];
 
-   $idADM = $linha ['idADM'];
-   $nomeADM= $linha ['nomeADM'];
-   $cpfADM= $linha ['cpfADM'];
-   $telefoneADM= $linha ['telefoneADM'];
-   $senhaADM= $linha ['senhaADM'];
-   $tipoADM= $linha ['tipoADM'];
+    echo "
+    <tr>
 
-
-    echo "<tr>
-    <th scope='row'>$nomeADM</th>
-    <td>$cpfADM</td>
-    <td>$telefoneADM</td>
-    <td>$senhaADM</td>
-    <td>$tipoADM</td>
-    <td>
-    <a href='adit_adm.php? idADM=$idADM' class='btn btn-success'> Editar </a>
-    
+    <th scope='row'>$usuarioVST</th>
+    <td>$setorVST</td>
+    <td>$escolaVST</td>
+    <td>$alunosVST</td>
+    <td>$conteudoVST</td>
+    <td>$professorVST</td>
+    <td>$dataVST</td>
+    <td> <a href='edit_vst.php? id=$id' class='btn btn-success'> Editar </a>
+    <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
+    onClick= " . '"' . "pegar_dados( $id , '$usuarioVST')" . '"'. ">Excluir</a>
+    </td>
     
   </tr>";
 }
@@ -261,9 +265,44 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
 
         </table>
 
-        <!--fim da tabela dos adm-->
+        <!--fim da tabela das visitas-->
+       
+      </div>
+    </main>
+  </div>
+</div>
 
+<!--delete inicio-->
 
+ <!-- Modal-->
+ <div class="modal fade" id="confirmar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="excluir_script.php" method="POST">
+       <p> Realmente deseja EXCLUIR <b ID="usuario_pessoa">Nome da pessoa</b>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <input type="hidden" name="id" ID="cod_pessoa" value="">
+        <input type="text" name="usuarioVST" ID="cod_pessoa1" value="">
+        <input type="submit" class="btn btn-danger" value="Confirmar"> </div>
+        <script type="text/Javascript">
+
+function pegar_dados(id, usuarioVST){ 
+
+    document.getElementById("usuario_pessoa").innerHTML = usuarioVST; 
+    document.getElementById("cod_pessoa1").value = usuarioVST; 
+    document.getElementById("cod_pessoa").value = id;
+
+}
+
+</form>
 
 
 <footer class="py-3 my-4 corPrimaria">
