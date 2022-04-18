@@ -6,12 +6,10 @@
     include('../conexao.php');
 
     //pegando os dados das tabelas e transformando em vareaveis
-    $sql = "SELECT * FROM `administrador`";
+    
     $sql2 = "SELECT * FROM `coordenador` ";
-    $sql3 = "SELECT * FROM `visitas`";
-    $dados= mysqli_query($conexao,$sql);
     $dados2= mysqli_query($conexao,$sql2);
-    $dados3= mysqli_query($conexao,$sql3);
+   
  ?>
 
 <html lang="pt-br"><head>
@@ -266,7 +264,39 @@ while ($linha= mysqli_fetch_assoc ( $dados2)) {
         <br>
         <br>
       </div>
+<!--delete inicio-->
 
+ <!-- Modal-->
+ <div class="modal fade" id="confirmar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+
+        <form action="excluirCDN.php" method="POST">
+       <p> Realmente deseja EXCLUIR <b ID="nomeCDN_pessoa">Nome da pessoa</b>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <input type="hidden" name="nomeCDN" ID="cod_pessoa1" value="">
+        <input type="text" name="idCDN" ID="cod_pessoa" value="">
+        <input type="submit" class="btn btn-danger" value="Confirmar">
+        <script type="text/Javascript">
+
+function pegar_dados(idCDN, nomeCDN){
+
+    document.getElementById("nomeCDN_pessoa").innerHTML = nomeCDN; 
+    document.getElementById("cod_pessoa1").value = idCDN; 
+    document.getElementById("cod_pessoa").value = nomeCDN;
+
+}
+
+</script>
+        </form>
+      </div>
 
 
 
