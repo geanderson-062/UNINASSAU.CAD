@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 19-Abr-2022 às 05:39
+-- Tempo de geração: 19-Abr-2022 às 23:08
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.3.30
 
@@ -41,7 +41,12 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`idADM`, `cpfADM`, `nomeADM`, `telefoneADM`, `senhaADM`, `tipoADM`) VALUES
-(18, '1234', 'Geanderson Ferreira ', '123654', '1234', 'Administrativo');
+(18, '1234', 'Geanderson Ferreira dos Santos', '123654', '1234', 'Administrativo'),
+(19, '12345', 'viviane', '123654', 'md5(12345)', 'Administrativo'),
+(21, '', '', '', 'md5()', ''),
+(26, '123456', 'Renata ', '12365422555', 'md5(123456)', 'Administrativo'),
+(28, '1234567', 'Renata Vitoria', '12365422555', 'md5(1234567)', 'Administrativo'),
+(30, '12345678', 'Geanderson Ferreira dos Santos', '123654', 'md5(12345678)', 'Administrativo');
 
 -- --------------------------------------------------------
 
@@ -88,8 +93,11 @@ CREATE TABLE `visitas` (
 --
 
 INSERT INTO `visitas` (`usuarioVST`, `setorVST`, `escolaVST`, `alunosVST`, `conteudoVST`, `professorVST`, `dataVST`, `id`) VALUES
-('viviane', 'setor11', 'uninassau', '50', 'ingrey', 'marcones', '0000-00-00 00:00:00', 11),
-('Genaderson', 'setor1', 'uninassau', '15', 'matematica', 'marcones', '0000-00-00 00:00:00', 14);
+('vivianee', 'setor11', 'uninassau', '50', 'ingrey', 'marcones', '0000-00-00 00:00:00', 11),
+('Genaderson', 'setor1', 'uninassau', '50', 'matematica', 'Danilo ', '0000-00-00 00:00:00', 22),
+('viviane', 'setor11', 'uninassau', '50', 'matematica', 'Danilo ', '0000-00-00 00:00:00', 23),
+('vivi', 'setor11', 'uninassau', '50', 'matematica', 'marcones', '0000-00-00 00:00:00', 24),
+('Geanderson Ferreira', 'setor1', 'uninassau', '147258', 'matematica', 'Danilo ', '0000-00-00 00:00:00', 25);
 
 --
 -- Índices para tabelas despejadas
@@ -123,7 +131,7 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de tabela `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `idADM` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `idADM` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=33;
 
 --
 -- AUTO_INCREMENT de tabela `coordenador`
@@ -135,7 +143,7 @@ ALTER TABLE `coordenador`
 -- AUTO_INCREMENT de tabela `visitas`
 --
 ALTER TABLE `visitas`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
