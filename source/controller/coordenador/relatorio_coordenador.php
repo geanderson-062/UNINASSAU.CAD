@@ -1,6 +1,6 @@
 <?php
 define('FPDF_FONTPATH', 'font/');
-require('../fpdf/fpdf.php');
+require '../FPDF/fpdf.php';
 include '../conexao.php';
 
 // exibe todos os registros $sql="SELECT * FROM users ";

@@ -28,11 +28,29 @@ $sql2= "UPDATE `coordenador` SET `idCDN`='$idCDN',`cpfCDN`='$cpfCDN',`nomeCDN`='
 
 //aviso se foi atualizado ou nao 
 if (mysqli_query($conexao , $sql2)) {
+    
+    //heard("location: dashboar");
+    //mensagem("$nomeCDN, Alterado com sucesso" , 'success');
 
-    mensagem("$nomeCDN, Alterado com sucesso" , 'success');
+    echo  "<script>
+      
+    alert('Alterado com sucesso');
+    window.location='dashboard_CDN.php';
+   
+    </script>";
+
+
 }else {
 
-    mensagem("$nomeCDN, NÃO Alterado com sucesso" , 'danger');
+    //mensagem("$nomeCDN, NÃO Alterado com sucesso" , 'danger');
+
+    echo  "<script>
+      
+    alert('NÃO Alterado com sucesso');
+    window.location='dashboard_CDN.php';
+   
+    </script>";
+
 }
 
 

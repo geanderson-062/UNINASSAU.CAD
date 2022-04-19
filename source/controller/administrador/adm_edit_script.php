@@ -29,13 +29,27 @@ WHERE idADM=$idADM";
 
 //aviso se foi atualizado ou nao 
 if (mysqli_query($conexao , $sql)) {
+
+  echo  "<script>
+      
+  alert('Alterado com sucesso');
+  window.location='dashboard_adm.php';
+ 
+  </script>";
    
-  mensagem("$nomeADM, Alterado com sucesso" , 'success');
+  //mensagem("$nomeADM, Alterado com sucesso" , 'success');
  
    
 }else {
+
+  echo  "<script>
+      
+    alert('NÃO Alterado com sucesso');
+    window.location='dashboard_CDN.php';
+   
+    </script>";
     
-    mensagem("$nomeADM, NÃO Alterado com sucesso" , 'danger');
+   // mensagem("$nomeADM, NÃO Alterado com sucesso" , 'danger');
     
 }
 

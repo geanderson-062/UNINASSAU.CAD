@@ -36,10 +36,26 @@ WHERE id=$id";
 //aviso se foi atualizado ou nao 
 if (mysqli_query($conexao , $sql3)) {
 
-    mensagem("Visita Alterada com sucesso" , 'success');
+
+    echo  "<script>
+      
+    alert('Alterado com sucesso');
+    window.location='dashboard_VST.php';
+   
+    </script>";
+
+    //mensagem("Visita Alterada com sucesso" , 'success');
 }else {
 
-    mensagem(" Visita NÃO Alterada com sucesso" , 'danger');
+    echo  "<script>
+      
+    alert('NÃO Alterado com sucesso');
+    window.location='dashboard_VST.php';
+   
+    </script>";
+
+
+   // mensagem(" Visita NÃO Alterada com sucesso" , 'danger');
 }
 
 
