@@ -333,8 +333,7 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
 
 function pegar_dados(idADM, nomeADM){
 
-<<<<<<< Updated upstream
-=======
+
     document.getElementById("nomeADM_pessoa").innerHTML = nomeADM; 
     document.getElementById("cod_pessoa1").value = nomeADM; 
     document.getElementById("cod_pessoa").value = idADM;
@@ -346,8 +345,6 @@ function pegar_dados(idADM, nomeADM){
       </div>
 
 
-
->>>>>>> Stashed changes
 <footer class="py-3 my-4 corPrimaria">
  
   <p class="text-center text-white">© 2022 Uninassau Company, Inc</p>

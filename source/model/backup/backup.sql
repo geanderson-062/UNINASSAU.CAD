@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Tempo de geração: 18-Abr-2022 às 02:29
+-- Tempo de geração: 19-Abr-2022 às 05:39
 -- Versão do servidor: 10.4.21-MariaDB
 -- versão do PHP: 7.3.30
 
@@ -41,13 +41,7 @@ CREATE TABLE `administrador` (
 --
 
 INSERT INTO `administrador` (`idADM`, `cpfADM`, `nomeADM`, `telefoneADM`, `senhaADM`, `tipoADM`) VALUES
-(1, '123', 'viviane raquel', '123654', '552448', 'adm'),
-(3, 'viviane', '1132364', '123654', '258963', 'Administrativo'),
-(4, 'Gean', '255479', '123654', '552687', 'Administrativo'),
-(6, 'Gean2', '411', '2259595959', '4484', 'Administrativo'),
-(8, '888888888888', 'Geanderson Ferreira dos Santos', '9999999999999', '65425', 'Administrativo'),
-(9, '125425', 'viviane', '123654', '552448', 'adm'),
-(12, 'vfeffrr', '5254588', '123654', '552448', 'adm');
+(18, '1234', 'Geanderson Ferreira ', '123654', '1234', 'Administrativo');
 
 -- --------------------------------------------------------
 
@@ -69,8 +63,8 @@ CREATE TABLE `coordenador` (
 --
 
 INSERT INTO `coordenador` (`idCDN`, `cpfCDN`, `nomeCDN`, `telefoneCDN`, `senhaCDN`, `tipoCDN`) VALUES
-(2, '88888888888', 'Genaderson ', '155452554', '25541', 'coordenador'),
-(3, '123654', 'Viviane Raquel', '123644582145', '123654', 'coordenador');
+(2, '88888888888', 'Viviane', '155452554', '25541', 'coordenador'),
+(5, '123654', 'Geanderson Ferreira dos Santos ', '81 89196517', '25541', 'coordenador');
 
 -- --------------------------------------------------------
 
@@ -94,11 +88,8 @@ CREATE TABLE `visitas` (
 --
 
 INSERT INTO `visitas` (`usuarioVST`, `setorVST`, `escolaVST`, `alunosVST`, `conteudoVST`, `professorVST`, `dataVST`, `id`) VALUES
-('viviane 22', 'setor1', 'uninassau', '147258', 'ingrey', 'marcones', '0000-00-00 00:00:00', 1),
-('vivi', 'setor1', 'uninassau', '147258', 'ingrey', 'marcones', '0000-00-00 00:00:00', 2),
-('viviane', 'setor1', 'uninassau', '147258', 'ingrey', 'marcones', '0000-00-00 00:00:00', 3),
-('Geanderson Ferreira', 'setor2', 'uninassau', '50', 'matematica', 'Danilo ', '0000-00-00 00:00:00', 5),
-('Viviane Raquel Silva', 'setor2', 'uninassau', '147258', 'matematica', 'marcones', '0000-00-00 00:00:00', 10);
+('viviane', 'setor11', 'uninassau', '50', 'ingrey', 'marcones', '0000-00-00 00:00:00', 11),
+('Genaderson', 'setor1', 'uninassau', '15', 'matematica', 'marcones', '0000-00-00 00:00:00', 14);
 
 --
 -- Índices para tabelas despejadas
@@ -132,19 +123,19 @@ ALTER TABLE `visitas`
 -- AUTO_INCREMENT de tabela `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `idADM` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `idADM` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT de tabela `coordenador`
 --
 ALTER TABLE `coordenador`
-  MODIFY `idCDN` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `idCDN` int(13) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de tabela `visitas`
 --
 ALTER TABLE `visitas`
-  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(200) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

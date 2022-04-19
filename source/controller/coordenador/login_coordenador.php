@@ -1,34 +1,33 @@
 <?php
-session_start();
-include ('../conexao.php');//incluidno arquivo de conecxao do banco de dados
 
-$cpfCDN = $_POST['cpfCDN'];
-$senhaCDN = $_POST['senhaCDN'];
+include "../conexao.php";
 
-//verificar se o login está certou ou não 
-$query = "SELECT * FROM coordenador where cpfCDN = $cpfCDN and senhaCDN = md5($senhaCDN)";
+if (isset($_POST['cpfCDN'])) {
+  $cpfCDN= $_POST ['cpfCDN'];
+  $senhaCDN = $_POST ['senhaCDN']; 
 
-//executando a aquery montada acima
-$result = mysqli_query($conexao, $query);
 
-//passando result como parametro
-$row = mysqli_num_rows($result); 
+$sql = "SELECT * FROM `coordenador` WHERE cpfCDN='$cpfCDN'AND senhaCDN= '$senhaCDN'";
 
-if($row > 0) {
+if ($result = mysqli_query($conexao, $sql)){
+$num_resgitros = mysqli_num_rows($result);
+if ($num_resgitros ==1) {
+  $linha= mysqli_fetch_assoc($result);
+  if (($cpfCDN==$linha['cpfCDN']) and ($senhaCDN==$linha['senhaCDN'])) { 
+    session_start();
+    $_SESSION['cpfCDN']= "Vivi";  
+    header("location: dashboard_coordenador.php");
+  
+    } else {
+  
+      echo"Login inválido";
+    }
+}else {
 
-  //se o usuario tiver logado va para dashboard
-  $_SESSION['usuario'] = $cpfCDN;//verificando se tao igual
-  header('Location: dashboard_coordenador.php');
-  exit();//finalizando operação
-
+   echo"Login ou senha não foram encontrados ou inválido.";
+  }
+ } else {echo "Nenhum resultado do banco";}
 }
-else{
 
-  //caso não estivel logado va para login novamente
-  $_SESSION['nao_autenticado'] = true;//quando o usuario for invalido
-  header('Location: tela_de_login_coordenador.php');
-  exit();//finalizando operação
-
-}
 
 ?>
