@@ -44,7 +44,7 @@
    <!--favicon-->
 
     <title>Dashboard Administrador</title>
-    <script src="../../../resources/JS/notification_adm.js"></script>
+    
 </head>
 
 <body style="background-color: rgb(41, 63, 136);">
