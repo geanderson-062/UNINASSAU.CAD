@@ -298,7 +298,8 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
     <td>$tipoADM</td>
     <td>
     <a href='adit_adm.php? idADM=$idADM' class='btn btn-success'> Editar </a>
-    
+    <a href='#' class='btn btn-danger' data-bs-toggle='modal' data-bs-target='#confirmar'
+    onClick= " . '"' . "pegar_dados( $idADM , '$nomeADM')" . '"'. ">Excluir</a>
     
   </tr>";
 }
@@ -310,7 +311,43 @@ while ($linha= mysqli_fetch_assoc ( $dados)) {
         </table>
 
         <!--fim da tabela dos adm-->
+<!-- Modal-->
+<div class="modal fade" id="confirmar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Confirmação</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
 
+        <form action="excluirADM.php" method="POST">
+       <p> Realmente deseja EXCLUIR <b ID="nomeADM_pessoa">Nome da pessoa</b>?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <input type="hidden" name="idADM" ID="cod_pessoa" value="">
+        <input type="hidden" name="nomeADM" ID="cod_pessoa1" value="">
+        <input type="submit" class="btn btn-danger" value="Confirmar">
+        <script type="text/Javascript">
+
+function pegar_dados(idADM, nomeADM){
+
+<<<<<<< Updated upstream
+=======
+    document.getElementById("nomeADM_pessoa").innerHTML = nomeADM; 
+    document.getElementById("cod_pessoa1").value = nomeADM; 
+    document.getElementById("cod_pessoa").value = idADM;
+
+}
+
+</script>
+        </form>
+      </div>
+
+
+
+>>>>>>> Stashed changes
 <footer class="py-3 my-4 corPrimaria">
  
   <p class="text-center text-white">© 2022 Uninassau Company, Inc</p>

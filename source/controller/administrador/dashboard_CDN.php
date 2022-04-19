@@ -326,7 +326,7 @@ while ($linha= mysqli_fetch_assoc ( $dados2)) {
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
         <input type="hidden" name="nomeCDN" ID="cod_pessoa2" value="">
-        <input type="text" name="idCDN" ID="codCDN_pessoa" value="">
+        <input type="hidden" name="idCDN" ID="codCDN_pessoa" value="">
         <input type="submit" class="btn btn-danger" value="Confirmar">
         <script type="text/Javascript">
 

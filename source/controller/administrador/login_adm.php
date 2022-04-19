@@ -6,7 +6,7 @@ $cpfADM = $_POST['cpfADM'];
 $senhaADM = $_POST['senhaADM'];
 
 //verificar se o login está certou ou não 
-$query = "SELECT * FROM administrador where cpfADM = $cpfADM and senhaADM = md5($senhaADM)";
+$query = "SELECT * FROM administrador where cpfADM = $cpfADM and senhaADM = $senhaADM";
 
 //executando a aquery montada acima
 $result = mysqli_query($conexao, $query);

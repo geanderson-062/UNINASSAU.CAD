@@ -2,17 +2,16 @@
 
 include "../conexao.php";
 
-$idCDN = $_POST ['idCDN'];
-$nomeCDN= $_POST ['nomeCDN'];
+$idADM = $_POST ['idADM'];
+$nomeADM= $_POST ['nomeADM'];
 
 
 
 
 
-$sql2= "DELETE FROM `coordenador` WHERE  idCDN=$idCDN" ;
+$sql= "DELETE FROM `administrador` WHERE idADM=$idADM" ;
 
-
-if (mysqli_query($conexao , $sql2)) {
+if (mysqli_query($conexao , $sql)) {
 
     mensagem("$nome, Excluido com sucesso" , 'success');
 }else {

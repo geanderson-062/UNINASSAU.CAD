@@ -12,7 +12,7 @@ $tipoADM= $_POST ['tipoADM'];
 
 ///inserindo valores na tabelda
 $sql= "INSERT INTO `administrador`( `cpfADM`, `nomeADM`, `telefoneADM`, `senhaADM`, `tipoADM`) 
-VALUES ('$cpfADM','$nomeADM','$telefoneADM','$senhaADM','$tipoADM')";
+VALUES ('$cpfADM','$nomeADM','$telefoneADM','md5($senhaADM)','$tipoADM')";
 
 
 if (mysqli_query($conexao , $sql)) {
