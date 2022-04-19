@@ -15,4 +15,12 @@ if(!$conexao){
 
 }
 
+
+Function mensagem ($texto , $tip) {
+    header("location: dashboard_adm.php");
+    
+    echo"<div class='alert alert-$tip'  role='alert'>$texto</div>";
+    
+    }
+
 ?>
