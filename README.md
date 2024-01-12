@@ -4,19 +4,33 @@
 
 O sistema UNINASSAU.CAD é uma solução de software desenvolvida especificamente como parte da disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. Este projeto visa gerenciar informações de coordenadores, administradores e visitas em um ambiente acadêmico, oferecendo funcionalidades como cadastro, login seguro e geração de relatórios, respeitando as normas da LGPD (Lei Geral de Proteção de Dados).
 
+---
+
 ## Contexto Acadêmico
 
 Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é aplicar os conhecimentos teóricos adquiridos durante o curso em um projeto prático e funcional.
+
+---
 
 ## Desenvolvedores
 
 - **Geanderson Ferreira**: Designer, Front-end, Back-end e Banco de Dados.
 - **Viviane Raquel**: Designer, Front-end, Back-end e Banco de Dados.
 
+---
+
+## Agradecimentos
+
+- Professor José Marcones da Silva Lira - *Por fornecer orientação e suporte ao longo do projeto*
+- Colegas de Classe - *Por feedback e sugestões*
+- UNINASSAU Caruaru - *Por fornecer a oportunidade e os recursos para desenvolver este projeto*
+
 ## Paleta de Cores
 
 - Azul: `rgb(41, 63, 136)`
 - Amarelo: `#FEF50F`
+
+---
 
 ## Requisitos do Sistema
 
@@ -26,6 +40,8 @@ Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profi
 - Cadastro de coordenadores, administradores e visitas com campos específicos.
 - Geração de relatórios em PDF para administração e coordenação.
 - Conformidade com a LGPD 2021, incluindo aviso de cookies e política de privacidade.
+
+---
 
 ## Telas do Sistema
 
@@ -37,9 +53,9 @@ Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profi
 - **Cadastro_Coordenador**: Tela para cadastrar novos coordenadores.
 - **Cadastro_Administrador**: Tela para cadastrar novos administradores.
 - **Cadastro_Visitas**: Tela para cadastrar novas visitas.
-- **Políticas de Uso e Privacidade**: Inform
+- **Políticas de Uso e Privacidade**: Informações sobre uso e privacidade do sistema.
 
-ações sobre uso e privacidade do sistema.
+---
 
 ## Tecnologias Utilizadas
 
@@ -51,6 +67,8 @@ ações sobre uso e privacidade do sistema.
 - **JavaScript**: Linguagem de programação para interatividade da página.
 - **Git e GitHub**: Ferramentas para controle de versão e colaboração.
 
+---
+
 ## Softwares Utilizados
 
 - **MySQL Workbench**: Ferramenta visual de design de banco de dados.
@@ -58,6 +76,8 @@ ações sobre uso e privacidade do sistema.
 - **XAMPP**: Pacote de servidores com Apache, MySQL, entre outros.
 - **Canva/Bootstrap/Algum Criador de Favicon/InfinityFree**: Ferramentas de design.
 - **Pixxlr**: Editor de imagens.
+
+---
 
 ## Contribuições
 
