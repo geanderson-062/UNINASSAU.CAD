@@ -1,110 +1,68 @@
-# atividade-de-pratica-profissional
+# Projeto UNINASSAU.CAD
 
-SISTEMA : UNINASSAU.CAD  
+## Visão Geral do Sistema
 
-# DESENVOLVEDORES: 
+O sistema UNINASSAU.CAD é uma solução de software desenvolvida especificamente como parte da disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. Este projeto visa gerenciar informações de coordenadores, administradores e visitas em um ambiente acadêmico, oferecendo funcionalidades como cadastro, login seguro e geração de relatórios, respeitando as normas da LGPD (Lei Geral de Proteção de Dados).
 
-         GEANDERSON FERREIRA = DESIGNER / FRONT END / BACK-END E BANCO   
-         VIVIANE RAQUEL = DESIGNER / FRONT END / BACK-END E BANCO 
+## Contexto Acadêmico
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+Este projeto foi desenvolvido para compor a nota na disciplina de Prática Profissional do quinto período do curso de Análise e Desenvolvimento de Sistemas. O objetivo é aplicar os conhecimentos teóricos adquiridos durante o curso em um projeto prático e funcional.
 
- CORES UTILIZADAS NO SISTEMA 
+## Desenvolvedores
 
-  # rgb(41, 63, 136) AZUL
-  # #FEF50F AMARELO
+- **Geanderson Ferreira**: Designer, Front-end, Back-end e Banco de Dados.
+- **Viviane Raquel**: Designer, Front-end, Back-end e Banco de Dados.
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////
+## Paleta de Cores
 
-# REQUISITOS PARA O SISTEMA
+- Azul: `rgb(41, 63, 136)`
+- Amarelo: `#FEF50F`
 
-fazer o login do coordenador e o adm com cpf e senha 
+## Requisitos do Sistema
 
-sistema deve usar criptografia md5 para a senha 
+- Autenticação do coordenador e do administrador usando CPF e senha.
+- Utilização de criptografia MD5 para a senha.
+- Tabela de visualização de coordenadores, administradores e visitas cadastrados.
+- Cadastro de coordenadores, administradores e visitas com campos específicos.
+- Geração de relatórios em PDF para administração e coordenação.
+- Conformidade com a LGPD 2021, incluindo aviso de cookies e política de privacidade.
 
-sistema deve ter uma tabela que mostra os coordenadores cadastrados , adiministradores cadastrados , visitas cadastradas dentro de home_adm 
+## Telas do Sistema
 
-sistema deve ter uma tabela que mostra as visitas cadastrradas dentro da home do coordenador. 
-   
-     INFORMAÇÕES PARA INSERIR NA tabela coordenador e para gerar o cadastro 
+- **Inicio/Index**: Menu de seleção entre os logins de coordenador ou administrador.
+- **Login_Administrador**: Tela de login para administradores.
+- **Login_Coordenador**: Tela de login para coordenadores.
+- **Home_Administrador**: Dashboard do administrador.
+- **Home_Coordenador**: Dashboard do coordenador.
+- **Cadastro_Coordenador**: Tela para cadastrar novos coordenadores.
+- **Cadastro_Administrador**: Tela para cadastrar novos administradores.
+- **Cadastro_Visitas**: Tela para cadastrar novas visitas.
+- **Políticas de Uso e Privacidade**: Inform
 
-     # Nome
-     # Cpf
-     # Telefone
-     # Senha
-     # Função
+ações sobre uso e privacidade do sistema.
 
-     INFORMAÇÕES PARA INSERIR NA tabela adiministrador e para gerar o cadastro 
+## Tecnologias Utilizadas
 
-     # Nome
-     # Cpf
-     # Telefone
-     # Senha
-     # Função
+- **PHP 8**: Linguagem de script do lado do servidor.
+- **MySQL**: Sistema de gerenciamento de banco de dados.
+- **Bootstrap 5**: Framework para design de interfaces.
+- **HTML 5**: Linguagem de marcação para estruturação de páginas web.
+- **CSS3**: Linguagem de estilo para design de páginas web.
+- **JavaScript**: Linguagem de programação para interatividade da página.
+- **Git e GitHub**: Ferramentas para controle de versão e colaboração.
 
-     INFORMAÇÕES PARA INSERIR NA tabela Visitas e para gerar o cadastro 
+## Softwares Utilizados
 
-     #Usuário
-     #Setor
-     #Escola
-     #Quantidade de alunos alunos
-     #Assunto abordado no dia
-     #Responsavel
-     #Data
+- **MySQL Workbench**: Ferramenta visual de design de banco de dados.
+- **VS Code**: Editor de código fonte.
+- **XAMPP**: Pacote de servidores com Apache, MySQL, entre outros.
+- **Canva/Bootstrap/Algum Criador de Favicon/InfinityFree**: Ferramentas de design.
+- **Pixxlr**: Editor de imagens.
 
-sistema deve criar um cadastro de coordenadores , adiministradores e visitas dentro da dashboard do adm 
+## Contribuições
 
-sistema deve criar um cadastro de visitas dentro da dashboard do coordenador 
+Este projeto é um esforço colaborativo e contribuições são sempre bem-vindas. Se você tem ideias para melhorar o sistema ou quer contribuir com o código, sinta-se à vontade para participar.
 
-sistema deve gerar relatorios em pdf para o adm com o nome de cada um dos 
-coordenadores , adiministradores e visitas . 
+---
 
-sistema deve gerar relatorios em pdf para o coordenador com o nome de cada uma das 
- visitas . 
-
-sistema deve estar dentro das normas lgpda 2021 / aviso de cookies e polica de privacidade
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-# TELAS NECESSARIAS PARA O SISTEMA 
-
-     # INCIO / INDEX = MENU PARA SECEIONAR ENTRE OS LOGIN COORENADOR OU adm
-     # LOGIN_ADM 
-     # LOGIN_COORDENADOR 
-     # HOME_ADM 
-     # HOME_COORDENADOR 
-     # CADASTRA_COORDENADOR 
-     # CADASTRA_ADIMINISTRADOR
-     # CADASTRA_VISITAS
-     # POLITICAS_DE_USO_E_PRIVACIDADE
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-# O QUE TECNOLOGIAS VAM0S USAR ? 
-
-PHP 8 
-
-MYSQL 
-
-BOOTSTRAP 5 
-
-HTML  5 
-
-CSS3 
-
-JAVASCRIPT 
-
-GIT E GITHUB 
-
-////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-# SOFTWARES QUE VAMOS USAR !
-
-MYSQL WORKBENCH 
-
-VS CODE 
-
-XAMPP 
-
-CANVA / BOOTSTRAP / ALGUM CRIADOR DE FAVICON / infinityfree
-PIXXLR/ 
+Este README fornece uma visão geral e informações básicas sobre o projeto UNINASSAU.CAD, desenvolvido como parte da disciplina de Prática Profissional do curso de Análise e Desenvolvimento de Sistemas. Para mais informações ou esclarecimentos, entre em contato com a equipe de desenvolvimento.
